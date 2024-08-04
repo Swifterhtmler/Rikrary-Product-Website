@@ -19,9 +19,9 @@ html,body {
 
 
 h1 {
-    margin-top: 900px;
+    margin-top: 3700px;
     color: whitesmoke;
-    font-size: 11.5rem;
+    font-size: 12.9rem;
     text-align: center;
     animation: glow 8s infinite linear, fade-in 2s ease-in-out forwards;
 }
@@ -89,9 +89,9 @@ h1::before {
 
 
 #video-container {
-    display: inline-block;
+    display: relative;
     padding: 10px; /* Adjust padding as needed */
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 15px; 
     margin-top: 380px;
     margin-bottom: 200px;
 
@@ -106,6 +106,66 @@ h1::before {
 }
 
 
-#video-container video:hover {
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7), 0 0 60px rgba(0, 255, 255, 0.7), 0 0 90px rgba(0, 255, 255, 0.7);
+#video-container:hover video:hover {
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.7), 0 0 70px rgba(0, 255, 255, 0.7), 0 0 95px rgba(0, 255, 255, 0.7);
+}
+
+
+h2 {
+    color: whitesmoke;
+    font-size: 12.5rem;
+    text-align: center;
+    animation: glow 8s infinite linear, fade-in 2s ease-in-out forwards;
+    margin-top: 600px;
+}
+
+
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+    width: 100%; 
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+
+
+   
+p {
+padding: 15px;
+
+}
+
+#logos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    animation: glow 8s infinite linear, fade-in 2s ease-in-out forwards;
+}
+
+#npm {
+    margin-left: 80px;
+    margin-right: -30px;
+}
+
+.links:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.5); 
+    transition: box-shadow 0.3s ease-in-out;
 }

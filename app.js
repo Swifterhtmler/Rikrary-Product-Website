@@ -1,6 +1,7 @@
 
 const video = document.getElementById("video");
 
+
  video.addEventListener("mouseover", () => {
     video.play()
 });
@@ -8,4 +9,6 @@ const video = document.getElementById("video");
 video.addEventListener("mouseout", () => {
     video.pause()
 });
+
+
 
