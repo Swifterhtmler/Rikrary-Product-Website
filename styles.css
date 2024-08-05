@@ -1,125 +1,156 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Ensure viewport scaling */
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
 
-
-html,body {
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: black ;
-} 
-
-
-/* linear-gradient(180deg, black, rgb(40,40,40) ) no-repeat */
-
-
-
+/* Responsive heading */
 h1 {
-    margin-top: 3700px;
+    margin-top: 240rem; /* Adjust as needed */
+    margin-bottom: 2rem;
     color: whitesmoke;
     font-size: 12.9rem;
     text-align: center;
+    margin-bottom: 380px;
     animation: glow 8s infinite linear, fade-in 2s ease-in-out forwards;
 }
 
-
+/* Responsive icon before heading */
 h1::before {
-   content: url(leaf.png);
-   position: relative;
-   top: 130px;
-   right: 20px;
-   opacity: 0; 
-   animation: fade-in 1s ease-in-out forwards;
+    content: url(leaf.png);
+    position: relative;
+    top: 6rem;
+    right: 0.5rem;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
 }
 
-
+/* Keyframes */
 @keyframes glow {
     0%, 100% {
         text-shadow: 0 0 5px rgba(50, 60, 90, 0.5),
                      0 0 7px rgba(83, 190, 180, 0.5),
                      0 0 10px rgba(210, 225, 250, 0.5);
     }
+    25% {
+        text-shadow: 0 0 7px rgba(50, 60, 90, 0.7),
+                     0 0 17px rgba(83, 190, 180, 0.7),
+                     0 0 25px rgba(210, 225, 250, 0.7);
+    }
     50% {
         text-shadow: 0 0 7px rgba(50, 160, 90, 1),
                      0 0 12px rgba(83, 190, 180, 1),
                      0 0 15px rgba(210, 225, 250, 1);
     }
-
-    25% {
-        text-shadow: 0 0 7px rgba(50, 60, 90, 0.7),
-        0 0 17px rgba(83, 190, 180, 0.7),
-        0 0 25px rgba(210, 225, 250, 0.7);
-    }
 }
 
 @keyframes fade-in {
-0% {
-    opacity: 0;
-}
-100% {
-    opacity: 1;
-}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-  @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     
-h1 {
-    color: whitesmoke;
-    font-size: 5.5rem;
-    text-align: center;
-    animation: glow 8s infinite linear, fade-in 2s ease-in-out forwards;
+    html, body {
+        height: auto;
+        width: 100%;
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        font-family: Arial, sans-serif;
+    }
+
+
+    h1 {
+        position: relative;
+        margin-top: 120rem;
+        font-size: 12vh; /* Use viewport width units for responsiveness */
+        margin: 1rem 0; /* Adjust this margin as needed */
+        padding: 10px;
+        margin-bottom: 20rem;
+    }
+
+    h1::before {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        top: 7.5rem;
+        right: 0.5rem;
+    }
+
+    #video-container {
+        padding: 10px;
+        border-radius: 15px;
+        margin-top: 20rem;   
+        margin-bottom: 20px;
+    }
+    
+    #video-container video {
+        display: block;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5),
+                    0 0 40px rgba(0, 255, 255, 0.5),
+                    0 0 60px rgba(0, 255, 255, 0.5);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    #h2 {
+        
+        font-size: 20vw; /* Use viewport width units for responsiveness */
+        margin-top: 10rem; /* Adjust this margin as needed */
+    }
+
+
 }
-
-
-h1::before {
-   content: url(leaf.png);
-   position: relative;
-   top: 80px;
-   right: 10px;
-   opacity: 0; 
-   animation: fade-in 1s ease-in-out forwards;
-}
-
- }
-
-
 
 #video-container {
-    display: relative;
-    padding: 10px; /* Adjust padding as needed */
-    border-radius: 15px; 
-    margin-top: 380px;
-    margin-bottom: 200px;
-
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 #video-container video {
     display: block;
-    width: 100%; /* Adjust as needed */
+    width: 100%;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5),
+                0 0 40px rgba(0, 255, 255, 0.5),
+                0 0 60px rgba(0, 255, 255, 0.5);
     transition: box-shadow 0.3s ease-in-out;
 }
 
-
 #video-container:hover video:hover {
-    box-shadow: 0 0 50px rgba(0, 255, 255, 0.7), 0 0 70px rgba(0, 255, 255, 0.7), 0 0 95px rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.7),
+                0 0 70px rgba(0, 255, 255, 0.7),
+                0 0 95px rgba(0, 255, 255, 0.7);
 }
 
-
+/* Responsive subheading */
 h2 {
     color: whitesmoke;
     font-size: 12.5rem;
     text-align: center;
     animation: glow 8s infinite linear, fade-in 2s ease-in-out forwards;
-    margin-top: 600px;
+    margin-top: 600px; /* This large margin might need to be reconsidered */
 }
-
-
 
 .footer {
     position: relative;
@@ -131,17 +162,14 @@ h2 {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     text-align: center;
-    width: 100%; 
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5),
+                0 0 40px rgba(0, 255, 255, 0.5),
+                0 0 60px rgba(0, 255, 255, 0.5);
     transition: box-shadow 0.3s ease-in-out;
-  }
+}
 
-
-
-   
 p {
-padding: 15px;
-
+    padding: 15px;
 }
 
 #logos {
@@ -151,12 +179,11 @@ padding: 15px;
     align-items: center;
 }
 
-
 .links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; 
+    gap: 20px;
     animation: glow 8s infinite linear, fade-in 2s ease-in-out forwards;
 }
 
@@ -166,6 +193,8 @@ padding: 15px;
 }
 
 .links:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.5); 
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5),
+                0 0 40px rgba(0, 255, 255, 0.5),
+                0 0 60px rgba(0, 255, 255, 0.5);
     transition: box-shadow 0.3s ease-in-out;
 }

@@ -6,6 +6,10 @@ const video = document.getElementById("video");
     video.play()
 });
 
+video.addEventListener("click", () => {
+    video.play()
+})
+
 video.addEventListener("mouseout", () => {
     video.pause()
 });
